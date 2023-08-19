@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/89058219b1.js"
+			crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="styles.css" />
+		<title>Assaf's Expiration Time Calculator</title>
+	</head>
+	<body>
+		<div id="print-area">
+			<h1 id='h1'>Assaf's Expiration Time Calculator</h1>
+			<div class="ordexp-container">
+				<div class="order-container">
+					<span>
+						<label>Purchase Order Number :</label>
+						<input
+							type="text"
+							id="order-inpt"
+							title="Purchase Order Number"
+							placeholder="for example: 123456" /></span
+					><br />
+					<span>
+						<label>Item Number :</label>
+						<input
+							type="text"
+							id="item-inpt"
+							title='Item name or number'
+							placeholder="for example: PCC-0123" /></span
+					><br />
+					<span>
+						<label>Supplier Name :</label>
+						<input
+							type="text"
+							id="supplier-inpt"
+							title='Supplier Name'
+							placeholder='for example: "Brock Brothers LLC"'
+					/></span>
+					<br />
+					<span>
+						<label>Name :</label>
+						<input
+							type="text"
+							id="name-inpt"
+							title="Name of the document producer"
+							placeholder='for example: "Assaf Benson"'
+					/></span>
+					<br />
+					<span>
+						<label>Date :</label>
+						<input type="date" id="date-inpt" title="Date of production of the document"
+					/></span>
+					<br />
+					<span id='sign-span'>
+						<label>Signature :</label>
+						<input
+							type="text"
+							id="sign-inpt"
+							title='Click Here To Sign On The Virtual Pad'
+							placeholder='Click Here To Sign'
+							background-color="transparent"
+					/></span>
+				</div>
+				<div class="expiration-container">
+					<span>
+						<label>Production Date :</label><br />
+						<input
+							type="date"
+							id="production-date-inpt"
+							title='Production Date' /></span
+					><br />
+					<span>
+						<label>Date Today :</label>
+						<input
+							type="date"
+							id="today-date-inpt"
+							title='The current date'
+							disabled /></span
+					><br />
+					<span>
+						<label>Expiration Date :</label>
+						<input type="date" id="expiry-date-inpt" title='Expiry Date'
+					/></span>
+					<br />
+					<span>
+						<label>Shelf Life :</label>
+						<input
+							type="text"
+							id="shelf-time-result"
+							title="Span of Product's Shelf life "
+							disabled
+							readonly="true"
+					/></span>
+					<br />
+					<span>
+						<label>Expiration Time left:</label>
+						<input
+							type="text"
+							id="expiration-date-result"
+							title="Product's Usage Time left"
+							disabled
+							readonly="true"
+					/></span>
+					<br />
+					<span>
+						<label>Expiration Time Passed :</label>
+						<input
+							type="text"
+							id="time-passed-result"
+							title="Product's Shelf life Passed"
+							background-color="transparent"
+							readonly="true"
+							disabled
+					/></span> </div
+			></div>
+
+			<div class="buttons-container">
+				<button class="print">Print</button>
+				<button class="clear">Clear</button>
+				<button class="light"><i class="fa-solid fa-toggle-off"></i></button>
+			</div>
+			<div class="expiration-meter">
+				<span class="precent">0%</span> <span class="precent">100%</span>
+				<div class="meter"></div
+			></div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

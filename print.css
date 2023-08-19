@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap');
+
+:root {
+	--container-padding: 0.5rem;
+	--primary-color: rgb(3, 13, 22);
+	--secondary-color: rgb(255, 255, 255);
+	--screen-width: 65vw;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+    width:100vw;
+	margin: 0rem;
+	padding: 0;
+}
+.ordexp-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: rgba(0, 0, 0, 0.03);
+	width: var(--screen-width);
+}
+
+.order-container,
+.expiration-container {
+	padding: var(--container-padding);
+	display: flex;
+	flex-direction: column;
+	width: calc(var(--screen-width) / 2);
+	
+}
+
+
+span {
+	display: flex;
+	justify-content: space-between;
+	background-color:transparent;
+	padding: 0.2rem;
+	box-shadow: var(--shadow-box);
+	border-radius: 0.5rem;
+}
+
+.buttons-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	background-color: rgba(147, 190, 255, 0.158);
+	padding: var(--container-padding);
+	border-radius: var(--container-border-radius);
+	box-shadow: var(--shadow-box);
+	width: var(--screen-width);
+	margin: var(--container-padding);
+}
+
+button {
+	background-color:transparent;
+    border:none;
+	color: transparent;
+}
+
+
+label {
+	padding: 0.02rem;
+	word-wrap: none;
+}
+
+input {
+	font-size: 1rem;
+	background-color: rgba(255, 255, 255, 0.274);
+	color: var(--primary-color);
+	border: dotted 0.5px var(--secondary-color);
+	border-radius: 0.5rem;
+	width: 13rem;
+	
+}
+
+
+
+input::-webkit-calender {
+	background-color: transparent;
+}
+
+
+.expiration-meter {
+	margin: var(--container-padding);
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--secondary-color);
+	width: var(--screen-width);
+	height: var(--container-border-radius);
+	position: relative;
+	border: #998 1px solid;
+	color: #998;
+}
+.meter {
+	color: #998;
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	width: calc(var(--screen-width));
+	height: var(--container-border-radius);
+	bottom: -1px;
+	right: -1px;
+	background-image: linear-gradient(to left,#fff, #000);
+	border: #998 1px solid;
+	align-items: center;
+	
+}
+
+.meter.active {
+	color: #998;
+	background-image: linear-gradient(to right, var(--primary-color),var(--secondary-color) );
+}
+
+.precent{
+	color: #998;
+	background-color: transparent;
+	box-shadow: none;
+	
+}
+
