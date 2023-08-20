@@ -17,6 +17,11 @@
 	background-color: var(--primary-color);
 	color: var(--secondary-color);
 }
+.comments.dark{
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+
+}
 
 body {
 	font-family: 'Roboto', sans-serif;
@@ -137,6 +142,26 @@ input::-webkit-calendar-picker-indicator:hover {
 }
 input::-webkit-calender {
 	background-color: transparent;
+}
+#sign-inpt{
+	height: 7rem;
+}
+.comments{
+	background-color: transparent;
+	width:28rem;
+	height:3.7rem;
+	line-break: loose;
+	border: dotted 0.5px var(--secondary-color);
+	border-radius: 0.5rem;
+	overflow:none;
+	resize: none;
+}
+
+#comments:focus{
+	outline-style: dashed;
+	outline-width: 1px;
+	outline-color: var(--secondary-color);
+	font-weight: bold;
 }
 canvas {
 	background-color: #999999;

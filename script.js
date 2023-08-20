@@ -15,6 +15,7 @@ const printBtnEl = document.querySelector('.print') //print button element
 const canvas = document.createElement('canvas') //canvas element for the signing function
 const btnContainerEl = document.querySelector('.buttons-container') //buttons container element
 const imgEl = document.createElement('img') //image used to capture the signature drawen by the user on the canvas
+const commentEl = document.getElementById('comments') //comment element
 
 let x = undefined // used to store the x position of the mouse cursor at the signTheElement() function
 let y = undefined // used to store the y position of the mouse cursor at the signTheElement() function
@@ -184,7 +185,9 @@ printBtnEl.addEventListener('click', () => {
   //                                                                                                    //
   ////////////////////////////////////////////////////////////////////////////////////////////////////////
   const inputs = document.querySelectorAll('input')
-  inputs.forEach((input) =>{ input.placeholder = ""}) 
+  inputs.forEach((input) => { input.placeholder = "" }) 
+  commentEl.placeholder = ""
+  
   printPage()
 } )
 
@@ -215,6 +218,7 @@ function printPage()
     printWindow.document.getElementById('expiration-date-result').value = document.getElementById('expiration-date-result').value
   printWindow.document.getElementById('time-passed-result').value = document.getElementById('time-passed-result').value
   printWindow.document.getElementById('h1').innerText = 'Report Number: ' + generate()
+  printWindow.document.querySelector('.comments').value = document.querySelector('.comments').value
   document.getElementById('h1').innerText = printWindow.document.getElementById('h1').innerText
     window.print()
   
@@ -233,13 +237,15 @@ modeBtnEl.addEventListener('click', () => { // toggle Dark and Light modes
     buttons.forEach((button) => button.classList.remove('dark')) //
     inputs.forEach((input) => input.classList.remove('dark'))    // 
     meter.classList.add('active')                                //
-    meterFrame.classList.add('dark')                             //
+    meterFrame.classList.add('dark')
+    commentEl.classList.remove('dark')                            //
   } else {                                                       //// toggle 
     html.classList.add('dark')                                   //
     buttons.forEach((button) => button.classList.add('dark'))    //
     inputs.forEach((input) => input.classList.add('dark'))       //
     meter.classList.remove('active')                             //
-    meterFrame.classList.add('dark')                             ////
+    meterFrame.classList.add('dark')
+    commentEl.classList.add('dark')                           ////
   }
 });
 clearBtnEl.addEventListener('click', () => { //clear the form and signature
@@ -249,11 +255,11 @@ clearBtnEl.addEventListener('click', () => { //clear the form and signature
   SLResultEl.value = ""
   ETResultEl.value = ""
   ETPResultEl.value = ""
+  commentEl.value = ""
   document.querySelector('#order-inpt').value = ""
   document.querySelector('#item-inpt').value = ""
   document.querySelector('#supplier-inpt').value = ""
   document.querySelector('#name-inpt').value = ""
-  //signInptEl.value = ""
   curDateEl.setAttribute('disabled', 'disabled')
   const signSpanEl = document.getElementById('sign-span')
   if (!signSpanEl.contains(signInptEl)) {

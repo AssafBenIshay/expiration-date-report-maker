@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div id="print-area">
-			<h1 id='h1'>Assaf's Expiration Time Calculator</h1>
+			<h1 id="h1">Assaf's Expiration Time Calculator</h1>
 			<div class="ordexp-container">
 				<div class="order-container">
 					<span>
@@ -27,7 +27,7 @@
 						<input
 							type="text"
 							id="item-inpt"
-							title='Item name or number'
+							title="Item name or number"
 							placeholder="for example: PCC-0123" /></span
 					><br />
 					<span>
@@ -35,7 +35,7 @@
 						<input
 							type="text"
 							id="supplier-inpt"
-							title='Supplier Name'
+							title="Supplier Name"
 							placeholder='for example: "Brock Brothers LLC"'
 					/></span>
 					<br />
@@ -50,16 +50,19 @@
 					<br />
 					<span>
 						<label>Date :</label>
-						<input type="date" id="date-inpt" title="Date of production of the document"
+						<input
+							type="date"
+							id="date-inpt"
+							title="Date of production of the document"
 					/></span>
 					<br />
-					<span id='sign-span'>
+					<span id="sign-span">
 						<label>Signature :</label>
 						<input
 							type="text"
 							id="sign-inpt"
-							title='Click Here To Sign On The Virtual Pad'
-							placeholder='Click Here To Sign'
+							title="Click Here To Sign On The Virtual Pad"
+							placeholder="Click Here To Sign"
 							background-color="transparent"
 					/></span>
 				</div>
@@ -69,19 +72,19 @@
 						<input
 							type="date"
 							id="production-date-inpt"
-							title='Production Date' /></span
+							title="Production Date" /></span
 					><br />
 					<span>
 						<label>Date Today :</label>
 						<input
 							type="date"
 							id="today-date-inpt"
-							title='The current date'
+							title="The current date"
 							disabled /></span
 					><br />
 					<span>
 						<label>Expiration Date :</label>
-						<input type="date" id="expiry-date-inpt" title='Expiry Date'
+						<input type="date" id="expiry-date-inpt" title="Expiry Date"
 					/></span>
 					<br />
 					<span>
@@ -113,8 +116,27 @@
 							background-color="transparent"
 							readonly="true"
 							disabled
-					/></span> </div
-			></div>
+					/></span>
+					<br />
+					<span>
+						<label>Comments :</label>
+						<textarea
+							type="text"
+							id="comments"
+							class='comments'
+							title="Write down comments here"
+							background-color="transparent"
+							placeholder='for example: batch number,lot number'
+							rows='5'
+							cols='25'
+							maxlength='256'
+							
+							
+						></textarea>
+						
+					</span>
+				</div>
+				</div>
 
 			<div class="buttons-container">
 				<button class="print">Print</button>
